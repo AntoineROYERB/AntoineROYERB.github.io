@@ -1,2 +1,3 @@
 # website
-My personal website
+
+Static personal website
