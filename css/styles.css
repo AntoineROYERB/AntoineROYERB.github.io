@@ -16,6 +16,20 @@
 html,
 body {
   height: 100%;
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      color-mix(in oklch, var(--ring) 18%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      color-mix(in oklch, var(--ring) 10%, transparent),
+      transparent 60%
+    ),
+    var(--bg);
+  background-attachment: fixed;
+  overscroll-behavior: none;
 }
 
 body {
@@ -29,19 +43,8 @@ body {
     Arial,
     sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(
-      circle at 20% 0%,
-      color-mix(in oklch, var(--ring) 18%, transparent),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 90% 10%,
-      color-mix(in oklch, var(--ring) 10%, transparent),
-      transparent 60%
-    ),
-    var(--bg);
   line-height: 1.55;
+  min-height: 100vh;
 }
 
 a {
@@ -78,10 +81,23 @@ code {
 }
 
 .profile {
-  width: min(60ch, 92vw);
+  width: min(65ch, 92vw);
   margin-inline: auto;
   margin-block: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 3.5vh, 2rem);
   text-align: center;
+}
+
+.avatar {
+  width: clamp(8rem, 26vw, 12rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: clamp(0.9rem, 2vw, 1.35rem);
+  box-shadow: var(--shadow);
+  border: 0.0625rem solid color-mix(in oklch, var(--text) 14%, transparent);
 }
 
 .content {
@@ -126,11 +142,10 @@ code {
 }
 
 .profile-header {
-  text-align: left;
+  text-align: center;
   padding: 0;
   margin: 0;
-  border-bottom: 0.0625rem solid
-    color-mix(in oklch, var(--text) 16%, transparent);
+  width: 100%;
 }
 
 .name {
@@ -146,33 +161,14 @@ code {
   margin: 0;
 }
 
-.profile-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  gap: 0;
-}
-
-.avatar-left {
-  width: clamp(10rem, 30vw, 16rem);
-  aspect-ratio: 1;
-  object-fit: cover;
-  display: block;
-  justify-self: center;
-}
-
-.profile-content {
+.links {
   display: flex;
   flex-direction: column;
-  gap: 0;
-}
-
-.links {
-  display: grid;
+  align-items: center;
   margin: 0;
-  justify-items: center;
   padding: 0;
   gap: 0.75rem;
+  width: 100%;
 }
 
 .link {
@@ -208,42 +204,18 @@ code {
 }
 
 @media (min-width: 45rem) {
-  .profile-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    gap: 1.125rem;
-    align-items: stretch;
+  .profile {
+    gap: clamp(1.75rem, 4vh, 2.75rem);
   }
 
-  .avatar-left {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: center;
-  }
-
-  .profile-content {
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .profile-header {
-    margin: 0;
-    padding: 0;
-    flex-shrink: 0;
+  .avatar {
+    width: clamp(10rem, 22vw, 14rem);
   }
 
   .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex: 1;
-    gap: 0.625rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 }
 
