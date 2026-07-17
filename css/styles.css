@@ -95,6 +95,7 @@ code {
   width: clamp(8rem, 26vw, 12rem);
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: -50% 100%;
   border-radius: clamp(0.9rem, 2vw, 1.35rem);
   box-shadow: var(--shadow);
   border: 0.0625rem solid color-mix(in oklch, var(--text) 14%, transparent);
