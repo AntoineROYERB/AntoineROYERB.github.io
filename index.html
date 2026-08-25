@@ -10,8 +10,8 @@
     <meta property="og:title" content="Antoine Royer Bournelle — Data engineer" />
     <meta property="og:description" content="Portfolio, projects, and experience of Antoine Royer Bournelle, Data engineer." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://antoine-royer.fr" />
-    <meta property="og:image" content="https://antoine-royer.fr/assets/img/me.png" />
+    <meta property="og:url" content="https://antoineroyerb.github.io/" />
+    <meta property="og:image" content="https://antoineroyerb.github.io/assets/img/me.png" />
     <meta property="og:locale" content="en_GB" />
 
     <meta name="twitter:card" content="summary" />
@@ -20,14 +20,19 @@
 
     <title>Antoine Royer Bournelle — Data engineer</title>
 
+    <link rel="canonical" href="https://antoineroyerb.github.io/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+    <style>
+      html:not(.i18n-ready) body { visibility: hidden; }
+    </style>
   </head>
 
   <body>
+    <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to content</a>
     <header class="topbar">
       <nav class="nav" aria-label="Main navigation">
         <a href="#experience" data-i18n="nav.experience">Experience</a>
@@ -39,7 +44,7 @@
       <button class="lang-toggle" id="langToggle" aria-label="Toggle language">FR</button>
     </header>
 
-    <main>
+    <main id="main">
       <section class="section hero" id="hero">
         <div class="hero-inner">
           <img
@@ -127,7 +132,7 @@
         <div class="section-content">
           <h2 class="section-title" data-i18n="projects.title">Projects</h2>
           <div class="project-grid">
-            <a href="https://github.com/AntoineROYERB/polymarketpricer" target="_blank" rel="noreferrer noopener" class="project-card">
+            <div class="project-card project-card--static">
               <div class="project-card-header">
                 <h3 class="project-name">Polymarket Smart Money Tracker</h3>
                 <span class="project-lang tag">Python / FastAPI</span>
@@ -135,8 +140,9 @@
               <p class="project-desc" data-i18n="proj0.desc">A data platform that identifies top-performing prediction-market traders: Mage-orchestrated ETL pipelines into a 16-table Postgres schema, a FastAPI backend with REST/WebSocket endpoints, an edge-scoring pipeline for predictive accuracy, and Discord alerts on new positions.</p>
               <div class="project-stats">
                 <span data-i18n="proj0.status">In progress</span>
+                <span data-i18n="proj0.private">Private repo</span>
               </div>
-            </a>
+            </div>
 
             <a href="https://github.com/AntoineROYERB/dofus.js" target="_blank" rel="noreferrer noopener" class="project-card">
               <div class="project-card-header">
@@ -284,6 +290,11 @@
     <script>
     const i18n = {
       en: {
+        "a11y.skip": "Skip to content",
+        "meta.description": "Antoine Royer Bournelle — Data engineer. Portfolio, projects, and experience.",
+        "meta.keywords": "data engineer, portfolio, Python, SQL, GCP, data pipeline, Paris",
+        "meta.ogDescription": "Portfolio, projects, and experience of Antoine Royer Bournelle, Data engineer.",
+        "meta.twitterDescription": "Portfolio, projects, and experience of Antoine Royer Bournelle.",
         "nav.experience": "Experience",
         "nav.projects": "Projects",
         "nav.skills": "Skills",
@@ -325,6 +336,7 @@
         "projects.title": "Projects",
         "proj0.desc": "A data platform that identifies top-performing prediction-market traders: Mage-orchestrated ETL pipelines into a 16-table Postgres schema, a FastAPI backend with REST/WebSocket endpoints, an edge-scoring pipeline for predictive accuracy, and Discord alerts on new positions.",
         "proj0.status": "In progress",
+        "proj0.private": "Private repo",
         "proj1.desc": "A turn-based online game with WebSocket real-time multiplayer, built with Go and React. Features a modular backend and isometric frontend.",
         "proj1.status": "In progress",
         "proj2.desc": "Deployed a full-stack application using Docker, GitHub Actions, and Ansible. DevOps course materials and best practices.",
@@ -341,6 +353,11 @@
         "contact.intro": "Feel free to reach out! I'm always open to discussing new opportunities, collaboration, or just chatting about data and tech."
       },
       fr: {
+        "a11y.skip": "Aller au contenu",
+        "meta.description": "Antoine Royer Bournelle — Data engineer. Portfolio, projets et expérience.",
+        "meta.keywords": "data engineer, portfolio, Python, SQL, GCP, pipeline de données, Paris",
+        "meta.ogDescription": "Portfolio, projets et expérience d'Antoine Royer Bournelle, Data engineer.",
+        "meta.twitterDescription": "Portfolio, projets et expérience d'Antoine Royer Bournelle.",
         "nav.experience": "Expérience",
         "nav.projects": "Projets",
         "nav.skills": "Compétences",
@@ -382,6 +399,7 @@
         "projects.title": "Projets",
         "proj0.desc": "Une plateforme data qui identifie les traders les plus performants sur un marché prédictif : pipelines ETL orchestrés avec Mage vers un schéma Postgres à 16 tables, backend FastAPI avec endpoints REST/WebSocket, pipeline de scoring d'edge pour mesurer la précision prédictive, et alertes Discord sur les nouvelles positions.",
         "proj0.status": "En cours",
+        "proj0.private": "Repo privé",
         "proj1.desc": "Jeu en ligne tour par tour avec multijoueur temps réel via WebSocket, construit avec Go et React. Backend modulaire et frontend isométrique.",
         "proj1.status": "En cours",
         "proj2.desc": "Déploiement d'une application full-stack avec Docker, GitHub Actions et Ansible. Cours et bonnes pratiques DevOps.",
@@ -410,9 +428,14 @@
         }
       });
       document.documentElement.lang = lang === "fr" ? "fr" : "en";
+      document.querySelector("meta[name='description']").setAttribute("content", texts["meta.description"]);
+      document.querySelector("meta[name='keywords']").setAttribute("content", texts["meta.keywords"]);
+      document.querySelector("meta[property='og:description']").setAttribute("content", texts["meta.ogDescription"]);
       document.querySelector("meta[property='og:locale']").setAttribute("content", lang === "fr" ? "fr_FR" : "en_GB");
+      document.querySelector("meta[name='twitter:description']").setAttribute("content", texts["meta.twitterDescription"]);
       document.getElementById("langToggle").textContent = lang === "fr" ? "EN" : "FR";
       localStorage.setItem("lang", lang);
+      document.documentElement.classList.add("i18n-ready");
     }
 
     document.getElementById("langToggle").addEventListener("click", () => {
