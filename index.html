@@ -58,8 +58,9 @@
             <h1 class="name" data-i18n="hero.name">Antoine ROYER BOURNELLE</h1>
             <p class="tagline" data-i18n="hero.tagline">Data engineer</p>
             <div class="prose">
-              <p data-i18n="hero.p1">I'm a data engineer based in Paris, currently open to new opportunities. I build ETL pipelines and data platforms end-to-end — from ingestion to the BI layer — and I like working close to the metal on infrastructure (Docker, GCP, orchestration) as much as on the analytics that sit on top of it.</p>
-              <p data-i18n="hero.p2">Previously at SIRIS Academic and Dataiku, shipping pipelines and platform features used in production.</p>
+              <p data-i18n="hero.p1">I'm a data engineer based in Paris. At SIRIS Academic I was one of two engineers owning the entire data stack of a 50-person company — ingestion, orchestration, warehouse and BI, built from scratch. I also write the backends and interfaces that consume the data, in Python, Go and TypeScript.</p>
+              <p data-i18n="hero.p2">Previously at Dataiku, where I shipped a platform feature that went into the product.</p>
+              <p class="hero-seeking" data-i18n="hero.p3">Right now I'm looking for a data or platform engineering role.</p>
             </div>
             <div class="hero-links">
               <a href="assets/docs/CV.pdf" class="btn btn-primary" target="_blank" rel="noreferrer" download>
@@ -81,12 +82,12 @@
                 <div class="timeline-header">
                   <h3 class="timeline-role" data-i18n="exp1.role">Data Engineer</h3>
                   <p class="timeline-company" data-i18n="exp1.company">SIRIS Academic — Barcelona, Spain</p>
-                  <span class="timeline-date" data-i18n="exp1.dates">Aug 2022 — Mar 2025</span>
+                  <span class="timeline-date" data-i18n="exp1.dates">Aug 2024 — Mar 2026</span>
                 </div>
                 <ul class="timeline-items">
                   <li data-i18n="exp1.item1">One of two data engineers in a 50-person company, building data foundations from the ground up</li>
                   <li data-i18n="exp1.item2">Main contributor to the internal data orchestration repo using <strong>Mage</strong>, defining reusable pipeline patterns</li>
-                  <li data-i18n="exp1.item3">Built and deployed 10+ scalable ETL pipelines in <strong>Python</strong> with <strong>HuggingFace</strong> NLP models</li>
+                  <li data-i18n="exp1.item3">Built and deployed <strong>30+</strong> ETL pipelines in <strong>Python</strong>, ingesting and enriching institutional datasets from 5 open sources with <strong>HuggingFace</strong> NLP models</li>
                   <li data-i18n="exp1.item4">Designed a modular data platform using <strong>Docker</strong>, <strong>GCP</strong>, <strong>PostgreSQL</strong>, and <strong>S3</strong></li>
                   <li data-i18n="exp1.item5">Authored technical documentation to accelerate onboarding and knowledge transfer</li>
                   <li data-i18n="exp1.item6">Delivered <strong>Looker</strong> and <strong>Apache Superset</strong> dashboards for cross-functional analytics</li>
@@ -100,7 +101,7 @@
                 <div class="timeline-header">
                   <h3 class="timeline-role" data-i18n="exp2.role">Software Engineer — Intern</h3>
                   <p class="timeline-company" data-i18n="exp2.company">Dataiku — Paris, France</p>
-                  <span class="timeline-date" data-i18n="exp2.dates">Mar 2022 — Sep 2022</span>
+                  <span class="timeline-date" data-i18n="exp2.dates">Mar 2023 — Sep 2023</span>
                 </div>
                 <ul class="timeline-items">
                   <li data-i18n="exp2.item1">Engineered a platform feature using <strong>DuckDB</strong> to let non-technical users join datasets without SQL</li>
@@ -120,7 +121,7 @@
                 </div>
                 <ul class="timeline-items">
                   <li data-i18n="exp3.item1">Built predictive models for stock market time-series forecasting using <strong>Python</strong></li>
-                  <li data-i18n="exp3.item2">Integrated a <strong>YOLOv</strong> deep learning model into a real-time video surveillance system</li>
+                  <li data-i18n="exp3.item2">Integrated a <strong>YOLOv4</strong> deep learning model into a real-time video surveillance system</li>
                 </ul>
               </div>
             </div>
@@ -131,18 +132,23 @@
       <section class="section" id="projects">
         <div class="section-content">
           <h2 class="section-title" data-i18n="projects.title">Projects</h2>
-          <div class="project-grid">
-            <div class="project-card project-card--static">
+          <div class="project-grid project-grid--focused">
+            <article class="project-card project-card--static project-card--featured">
               <div class="project-card-header">
-                <h3 class="project-name">Polymarket Smart Money Tracker</h3>
-                <span class="project-lang tag">Python / FastAPI</span>
+                <h3 class="project-name">Polymarket Pricer</h3>
+                <span class="project-lang tag">Python / FastAPI / PostgreSQL</span>
               </div>
-              <p class="project-desc" data-i18n="proj0.desc">A data platform that identifies top-performing prediction-market traders: Mage-orchestrated ETL pipelines into a 16-table Postgres schema, a FastAPI backend with REST/WebSocket endpoints, an edge-scoring pipeline for predictive accuracy, and Discord alerts on new positions.</p>
+              <p class="project-desc" data-i18n="proj0.desc">A full-stack analytics platform for Polymarket prediction markets. Mage-orchestrated ETL validates and ingests markets across 8 categories on a 10-second refresh, feeding a FastAPI backend with REST and WebSocket endpoints, an edge-scoring pipeline that measures predictive accuracy, and Discord alerts on new positions.</p>
+              <ul class="project-metrics">
+                <li><strong>50k+</strong><span data-i18n="proj0.m1">markets ingested</span></li>
+                <li><strong>13</strong><span data-i18n="proj0.m2">ETL pipelines</span></li>
+                <li><strong>29</strong><span data-i18n="proj0.m3">API endpoints</span></li>
+                <li><strong>235+</strong><span data-i18n="proj0.m4">tests</span></li>
+              </ul>
               <div class="project-stats">
-                <span data-i18n="proj0.status">In progress</span>
-                <span data-i18n="proj0.private">Private repo</span>
+                <span data-i18n="proj0.status">Being polished for public release</span>
               </div>
-            </div>
+            </article>
 
             <a href="https://github.com/AntoineROYERB/dofus.js" target="_blank" rel="noreferrer noopener" class="project-card">
               <div class="project-card-header">
@@ -153,33 +159,6 @@
               <div class="project-stats">
                 <span>★ 7</span>
                 <span data-i18n="proj1.status">In progress</span>
-              </div>
-            </a>
-
-            <a href="https://github.com/AntoineROYERB/DevOps" target="_blank" rel="noreferrer noopener" class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">DevOps</h3>
-                <span class="project-lang tag">Docker / CI</span>
-              </div>
-              <p class="project-desc" data-i18n="proj2.desc">Deployed a full-stack application using Docker, GitHub Actions, and Ansible. DevOps course materials and best practices.</p>
-            </a>
-
-            <a href="https://github.com/AntoineROYERB/sorting-algorithms-visualizer" target="_blank" rel="noreferrer noopener" class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">Sorting Visualizer</h3>
-                <span class="project-lang tag">TypeScript</span>
-              </div>
-              <p class="project-desc" data-i18n="proj3.desc">Interactive tool for visualizing various sorting algorithms, helping users understand their inner workings through animation.</p>
-            </a>
-
-            <a href="https://github.com/AntoineROYERB/Tic-Tac-Toe" target="_blank" rel="noreferrer noopener" class="project-card">
-              <div class="project-card-header">
-                <h3 class="project-name">Tic-Tac-Toe</h3>
-                <span class="project-lang tag">React / TypeScript</span>
-              </div>
-              <p class="project-desc" data-i18n="proj4.desc">A classic Tic-Tac-Toe game built to master React and TypeScript fundamentals.</p>
-              <div class="project-stats">
-                <span>★ 1</span>
               </div>
             </a>
           </div>
@@ -199,8 +178,6 @@
                 <span class="tag">JavaScript</span>
                 <span class="tag">React</span>
                 <span class="tag">Go</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
               </div>
             </div>
             <div class="skill-category">
@@ -284,7 +261,7 @@
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 Antoine Royer Bournelle</p>
+      <p>&copy; <span id="year">2026</span> Antoine Royer Bournelle</p>
     </footer>
 
     <script>
@@ -302,46 +279,47 @@
         "nav.contact": "Contact",
         "hero.name": "Antoine ROYER BOURNELLE",
         "hero.tagline": "Data engineer",
-        "hero.p1": "I'm a data engineer based in Paris, currently open to new opportunities. I build ETL pipelines and data platforms end-to-end — from ingestion to the BI layer — and I like working close to the metal on infrastructure (Docker, GCP, orchestration) as much as on the analytics that sit on top of it.",
-        "hero.p2": "Previously at SIRIS Academic and Dataiku, shipping pipelines and platform features used in production.",
+        "hero.p1": "I'm a data engineer based in Paris. At SIRIS Academic I was one of two engineers owning the entire data stack of a 50-person company — ingestion, orchestration, warehouse and BI, built from scratch. I also write the backends and interfaces that consume the data, in Python, Go and TypeScript.",
+        "hero.p2": "Previously at Dataiku, where I shipped a platform feature that went into the product.",
+        "hero.p3": "Right now I'm looking for a data or platform engineering role.",
         "hero.resume": "Download CV",
         "experience.title": "Experience",
         "exp1.role": "Data Engineer",
         "exp1.company": "SIRIS Academic — Barcelona, Spain",
-        "exp1.dates": "Aug 2022 — Mar 2025",
+        "exp1.dates": "Aug 2024 — Mar 2026",
         "exp1.item1": "One of two data engineers in a 50-person company, building data foundations from the ground up",
-        "exp1.item2": "Main contributor to the internal data orchestration repo using Mage, defining reusable pipeline patterns",
-        "exp1.item3": "Built and deployed 10+ scalable ETL pipelines in Python with HuggingFace NLP models",
-        "exp1.item4": "Designed a modular data platform using Docker, GCP, PostgreSQL, and S3",
+        "exp1.item2": "Main contributor to the internal data orchestration repo using <strong>Mage</strong>, defining reusable pipeline patterns",
+        "exp1.item3": "Built and deployed <strong>30+</strong> ETL pipelines in <strong>Python</strong>, ingesting and enriching institutional datasets from 5 open sources with <strong>HuggingFace</strong> NLP models",
+        "exp1.item4": "Designed a modular data platform using <strong>Docker</strong>, <strong>GCP</strong>, <strong>PostgreSQL</strong>, and <strong>S3</strong>",
         "exp1.item5": "Authored technical documentation to accelerate onboarding and knowledge transfer",
-        "exp1.item6": "Delivered Looker and Apache Superset dashboards for cross-functional analytics",
+        "exp1.item6": "Delivered <strong>Looker</strong> and <strong>Apache Superset</strong> dashboards for cross-functional analytics",
         "exp2.role": "Software Engineer — Intern",
         "exp2.company": "Dataiku — Paris, France",
-        "exp2.dates": "Mar 2022 — Sep 2022",
-        "exp2.item1": "Engineered a platform feature using DuckDB to let non-technical users join datasets without SQL",
-        "exp2.item2": "Developed backend components with Node.js, TypeScript, and microservices architecture",
-        "exp2.item3": "Contributed to frontend UI integration in React/Redux, improving data workflow usability",
+        "exp2.dates": "Mar 2023 — Sep 2023",
+        "exp2.item1": "Engineered a platform feature using <strong>DuckDB</strong> to let non-technical users join datasets without SQL",
+        "exp2.item2": "Developed backend components with <strong>Node.js</strong>, <strong>TypeScript</strong>, and microservices architecture",
+        "exp2.item3": "Contributed to frontend UI integration in <strong>React/Redux</strong>, improving data workflow usability",
         "exp3.role": "Python Developer — Intern",
         "exp3.company": "Capgemini — Paris, France",
         "exp3.dates": "Aug 2021 — Jan 2022",
-        "exp3.item1": "Built predictive models for stock market time-series forecasting using Python",
-        "exp3.item2": "Integrated a YOLOv deep learning model into a real-time video surveillance system",
+        "exp3.item1": "Built 5 predictive models for stock market time-series forecasting using <strong>Python</strong>",
+        "exp3.item2": "Integrated a <strong>YOLOv4</strong> deep learning model into a real-time video surveillance system",
         "skills.title": "Skills",
         "skills.lang": "Languages",
         "skills.tools": "Tools & Platforms",
         "skills.data": "Data Engineering",
         "skills.languages": "Natural Languages",
         "skills.french": "French — Native",
-        "skills.english": "English — C1",
+        "skills.english": "English — C2",
         "projects.title": "Projects",
-        "proj0.desc": "A data platform that identifies top-performing prediction-market traders: Mage-orchestrated ETL pipelines into a 16-table Postgres schema, a FastAPI backend with REST/WebSocket endpoints, an edge-scoring pipeline for predictive accuracy, and Discord alerts on new positions.",
-        "proj0.status": "In progress",
-        "proj0.private": "Private repo",
+        "proj0.desc": "A full-stack analytics platform for Polymarket prediction markets. Mage-orchestrated ETL validates and ingests markets across 8 categories on a 10-second refresh, feeding a FastAPI backend with REST and WebSocket endpoints, an edge-scoring pipeline that measures predictive accuracy, and Discord alerts on new positions.",
+        "proj0.m1": "markets ingested",
+        "proj0.m2": "ETL pipelines",
+        "proj0.m3": "API endpoints",
+        "proj0.m4": "tests",
+        "proj0.status": "Being polished for public release",
         "proj1.desc": "A turn-based online game with WebSocket real-time multiplayer, built with Go and React. Features a modular backend and isometric frontend.",
         "proj1.status": "In progress",
-        "proj2.desc": "Deployed a full-stack application using Docker, GitHub Actions, and Ansible. DevOps course materials and best practices.",
-        "proj3.desc": "Interactive tool for visualizing various sorting algorithms, helping users understand their inner workings through animation.",
-        "proj4.desc": "A classic Tic-Tac-Toe game built to master React and TypeScript fundamentals.",
         "education.title": "Education",
         "edu1.school": "Ecole Polytechnique Féminine",
         "edu1.degree": "Software & Data Engineering — AI",
@@ -365,46 +343,47 @@
         "nav.contact": "Contact",
         "hero.name": "Antoine ROYER BOURNELLE",
         "hero.tagline": "Data engineer",
-        "hero.p1": "Je suis data engineer, basé à Paris, et je recherche actuellement de nouvelles opportunités. Je construis des pipelines ETL et des plateformes data de bout en bout — de l'ingestion à la couche BI — et j'aime autant travailler sur l'infrastructure (Docker, GCP, orchestration) que sur l'analytique qui s'appuie dessus.",
-        "hero.p2": "Précédemment chez SIRIS Academic et Dataiku, où j'ai livré des pipelines et des fonctionnalités de plateforme utilisés en production.",
+        "hero.p1": "Je suis data engineer, basé à Paris. Chez SIRIS Academic, j'étais l'un des deux ingénieurs qui portaient toute la donnée d'une société de 50 personnes — ingestion, orchestration, entrepôt et BI, construits à partir de zéro. J'écris aussi les backends et les interfaces qui consomment cette donnée, en Python, Go et TypeScript.",
+        "hero.p2": "Précédemment chez Dataiku, où j'ai livré une fonctionnalité intégrée au produit.",
+        "hero.p3": "Je cherche actuellement un poste de data ou platform engineer.",
         "hero.resume": "Télécharger le CV",
         "experience.title": "Expérience",
         "exp1.role": "Data Engineer",
         "exp1.company": "SIRIS Academic — Barcelone, Espagne",
-        "exp1.dates": "Août 2022 — Mars 2025",
+        "exp1.dates": "Août 2024 — Mars 2026",
         "exp1.item1": "Un des deux data engineers dans une entreprise de 50 personnes, construisant les fondations data from scratch",
-        "exp1.item2": "Contributeur principal du repo d'orchestration data interne avec Mage, définissant des patterns de pipelines réutilisables",
-        "exp1.item3": "Développé et déployé 10+ pipelines ETL scalables en Python avec des modèles NLP HuggingFace",
-        "exp1.item4": "Conçu une plateforme data modulaire avec Docker, GCP, PostgreSQL et S3",
+        "exp1.item2": "Contributeur principal du repo d'orchestration data interne avec <strong>Mage</strong>, définissant des patterns de pipelines réutilisables",
+        "exp1.item3": "Développé et déployé <strong>30+</strong> pipelines ETL en <strong>Python</strong>, ingérant et enrichissant des jeux de données institutionnels issus de 5 sources ouvertes avec des modèles NLP <strong>HuggingFace</strong>",
+        "exp1.item4": "Conçu une plateforme data modulaire avec <strong>Docker</strong>, <strong>GCP</strong>, <strong>PostgreSQL</strong> et <strong>S3</strong>",
         "exp1.item5": "Rédigé de la documentation technique pour accélérer l'onboarding et le transfert de connaissances",
-        "exp1.item6": "Livré des dashboards Looker et Apache Superset pour l'analytics cross-fonctionnelle",
+        "exp1.item6": "Livré des dashboards <strong>Looker</strong> et <strong>Apache Superset</strong> pour l'analytics cross-fonctionnelle",
         "exp2.role": "Software Engineer — Stage",
         "exp2.company": "Dataiku — Paris, France",
-        "exp2.dates": "Mars 2022 — Sept 2022",
-        "exp2.item1": "Développé une fonctionnalité avec DuckDB permettant aux utilisateurs non techniques de joindre des datasets sans SQL",
-        "exp2.item2": "Développé des composants backend avec Node.js, TypeScript et architecture microservices",
-        "exp2.item3": "Contribué à l'intégration frontend React/Redux, améliorant l'utilisabilité des workflows data",
+        "exp2.dates": "Mars 2023 — Sept 2023",
+        "exp2.item1": "Développé une fonctionnalité avec <strong>DuckDB</strong> permettant aux utilisateurs non techniques de joindre des datasets sans SQL",
+        "exp2.item2": "Développé des composants backend avec <strong>Node.js</strong>, <strong>TypeScript</strong> et architecture microservices",
+        "exp2.item3": "Contribué à l'intégration frontend <strong>React/Redux</strong>, améliorant l'utilisabilité des workflows data",
         "exp3.role": "Développeur Python — Stage",
         "exp3.company": "Capgemini — Paris, France",
         "exp3.dates": "Août 2021 — Jan 2022",
-        "exp3.item1": "Construit des modèles prédictifs pour le forecasting de séries temporelles boursières en Python",
-        "exp3.item2": "Intégré un modèle deep learning YOLOv dans un système de vidéosurveillance temps réel",
+        "exp3.item1": "Construit 5 modèles prédictifs pour le forecasting de séries temporelles boursières en <strong>Python</strong>",
+        "exp3.item2": "Intégré un modèle deep learning <strong>YOLOv4</strong> dans un système de vidéosurveillance temps réel",
         "skills.title": "Compétences",
         "skills.lang": "Langages",
         "skills.tools": "Outils & Plateformes",
         "skills.data": "Data Engineering",
         "skills.languages": "Langues",
-        "skills.french": "Français — Courant",
-        "skills.english": "Anglais — C1",
+        "skills.french": "Français — Langue maternelle",
+        "skills.english": "Anglais — C2",
         "projects.title": "Projets",
-        "proj0.desc": "Une plateforme data qui identifie les traders les plus performants sur un marché prédictif : pipelines ETL orchestrés avec Mage vers un schéma Postgres à 16 tables, backend FastAPI avec endpoints REST/WebSocket, pipeline de scoring d'edge pour mesurer la précision prédictive, et alertes Discord sur les nouvelles positions.",
-        "proj0.status": "En cours",
-        "proj0.private": "Repo privé",
+        "proj0.desc": "Une plateforme analytique full-stack pour les marchés prédictifs Polymarket. Des pipelines ETL orchestrés avec Mage valident et ingèrent les marchés de 8 catégories avec un rafraîchissement toutes les 10 secondes, alimentant un backend FastAPI (REST et WebSocket), un pipeline de scoring d'edge qui mesure la précision prédictive, et des alertes Discord sur les nouvelles positions.",
+        "proj0.m1": "marchés ingérés",
+        "proj0.m2": "pipelines ETL",
+        "proj0.m3": "endpoints d'API",
+        "proj0.m4": "tests",
+        "proj0.status": "En cours de finalisation avant ouverture du code",
         "proj1.desc": "Jeu en ligne tour par tour avec multijoueur temps réel via WebSocket, construit avec Go et React. Backend modulaire et frontend isométrique.",
         "proj1.status": "En cours",
-        "proj2.desc": "Déploiement d'une application full-stack avec Docker, GitHub Actions et Ansible. Cours et bonnes pratiques DevOps.",
-        "proj3.desc": "Outil interactif de visualisation d'algorithmes de tri, permettant de comprendre leur fonctionnement par l'animation.",
-        "proj4.desc": "Un jeu de Tic-Tac-Toe classique pour maîtriser les fondamentaux de React et TypeScript.",
         "education.title": "Formation",
         "edu1.school": "Ecole Polytechnique Féminine",
         "edu1.degree": "Software & Data Engineering — IA",
@@ -424,7 +403,13 @@
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (texts[key] !== undefined) {
-          el.textContent = texts[key];
+          // Dictionary strings are static and authored here, so inline <strong>
+          // is safe to render; anything else stays plain text.
+          if (texts[key].indexOf("<") !== -1) {
+            el.innerHTML = texts[key];
+          } else {
+            el.textContent = texts[key];
+          }
         }
       });
       document.documentElement.lang = lang === "fr" ? "fr" : "en";
@@ -444,6 +429,8 @@
     });
 
     applyLanguage(currentLang);
+
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", e => {
