@@ -605,3 +605,57 @@ img {
     transition: none !important;
   }
 }
+
+/* ===== Featured project ===== */
+.project-grid.project-grid--focused {
+  grid-template-columns: 1fr;
+}
+
+.project-card--featured {
+  gap: 0.9rem;
+  padding: 1.6rem 1.75rem;
+  border-color: var(--ring-soft);
+}
+
+.project-card--featured .project-name {
+  font-size: 1.25rem;
+}
+
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2.25rem;
+  margin: 0.25rem 0 0;
+  padding: 0.9rem 0 0;
+  list-style: none;
+  border-top: 0.0625rem solid color-mix(in oklch, var(--text) 8%, transparent);
+}
+
+.project-metrics li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.project-metrics strong {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ring);
+  font-variant-numeric: tabular-nums;
+}
+
+.project-metrics span {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* ===== Hero: what I'm looking for ===== */
+.hero .prose p.hero-seeking {
+  margin-top: 1rem;
+  padding-inline-start: 0.85rem;
+  border-inline-start: 0.1875rem solid var(--ring);
+  color: var(--text);
+  font-weight: 500;
+}
