@@ -1,0 +1,208 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.1pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{ #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingCompact}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textit{\small -- #2} & \textit{\small #3, #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\overfullrule=1mm
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{small}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://antoineroyerb.github.io/}{\Large Antoine Royer--Bournelle}} & Email: \href{mailto:royerb.antoine@gmail.com}{royerb.antoine@gmail.com} \\
+  \href{https://www.linkedin.com/in/antoine-royer-bournelle/}{LinkedIn /antoine-royer-bournelle} &
+  Mobile: +33 6 14 97 49 92 \\
+  \href{https://github.com/AntoineROYERB}{GitHub /AntoineROYERB} &
+  \href{https://antoineroyerb.github.io/}{antoineroyerb.github.io} \\
+\end{tabular*}
+\end{small}
+
+
+%--------PROFESSIONAL SUMMARY------------
+
+\section{Professional Summary}
+
+
+\justifying
+
+\textbf{Data Engineer} who owned the full data stack of a 50-person organization as one of two engineers -- ingestion, orchestration, warehouse, and BI, built from the ground up. I work across the stack: I also write the backends and interfaces that consume the data, in Python, Go, and TypeScript.
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+ \resumeSubItem{}
+ {
+     \textbf{Programming languages}{: Python, SQL, JavaScript, Typescript, React, Go }
+} \resumeSubItem{} {  \textbf{Technologies and Frameworks}:  Docker, GCP, AWS, PostgreSQL, FastAPI, Mage, Git, Looker, Apache Superset } \resumeSubItem{} { {\textbf{Data Engineering}}:   Data ingestion, enrichment, pipeline orchestration, data platform deployment }  \resumeSubItem{}{      \textbf{Language}:
+French (Native), English (C2)
+ }
+ \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{\href{https://www.sirisacademic.com}{SIRIS Academic}}{Barcelona, Spain}
+{Data Engineer - Full time}{Aug 2024 - Mar 2026}
+\resumeItemListStart
+
+    \resumeItem{}
+{One of two data engineers in a 50-person company, building the data foundations from the ground up}
+
+\resumeItem{}
+{Main contributor to an internal data orchestration \textbf{Github} repo using \textbf{Mage}, defining reusable pipeline patterns and improving maintainability}
+
+    \resumeItem{}
+        {\textbf{Built and deployed 30+ scalable ETL pipelines in Python} to automate ingestion and enrichment of institutional datasets using Hugging Face NLP models}
+        
+    \resumeItem{}
+        {Designed and maintained a modular data platform using \textbf{Docker}, \textbf{GCP}, \textbf{PostgreSQL}, and \textbf{S3}, ingesting data from 5 open-source sources}
+        
+    \resumeItem{}
+       {Authored technical documentation to accelerate onboarding and ensure knowledge transfer across teams}
+       
+\resumeItem{}
+{Designed and delivered \textbf{Looker} and \textbf{Apache Superset} dashboards to support business analysis needs across cross-functional teams (analysts, PMs), enabling data-driven decision making}
+
+\resumeItemListEnd
+
+    \resumeSubheadingCompact
+      {\href{https://www.dataiku.com}{Dataiku}}
+      {Software Engineer - Intern}{Paris, France}{Mar 2023 - Sep 2023}
+      \resumeItemListStart
+        \resumeItem{}
+            {
+Engineered a platform feature using \textbf{DuckDB} to allow non-technical users to join datasets without SQL
+}
+        \resumeItem{}
+            {
+Developed backend components with \textbf{Node.js}, \textbf{TypeScript}, and \textbf{microservices architecture}}    
+        \resumeItem{}
+            {
+Contributed to frontend UI integration in \textbf{React/Redux}, improving usability of data workflows
+.}
+      \resumeItemListEnd
+
+    \resumeSubheadingCompact
+      {Capgemini}
+      {Python Developer - Intern}{Paris, France}{Aug 2021 - Jan 2022}
+      \resumeItemListStart
+        \resumeItem{}
+          {
+Built 5 predictive models for \textbf{stock market time-series forecasting} using Python
+}
+        \resumeItem{}
+        {
+Integrated a \textbf{YOLOv4 deep learning model} into a real-time video surveillance system
+}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+   \resumeItem{Polymarket Pricer}{-- Full-stack analytics platform for Polymarket prediction markets}
+    \vspace{-6pt}
+    \resumeItemListStart
+        \resumeItem{}
+            {Designed and orchestrated 13 ETL pipelines (12 data + 1 orchestration) validating and ingesting 50,000+ markets across 8 categories, with a 10s refresh interval for real-time alerts}
+        \resumeItem{}
+            {Built a \textbf{FastAPI} backend exposing 29 endpoints (including real-time WebSocket feeds) with rate limiting (60 req/min), backed by a \textbf{PostgreSQL} database of 22 tables and 21 ORM models managed through 22 Alembic migrations}
+        \resumeItem{}
+            {Ensured reliability with 235+ unit and API tests, and containerized the full stack (PostgreSQL, Mage, FastAPI, Next.js) into 4 Docker services}
+    \resumeItemListEnd
+  
+    \resumeSubItem{Dofus.js}{-- Turn-based online game with real-time multiplayer: WebSocket infrastructure in Go, isometric React front end, full stack containerized with Docker
+}
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+          {Ecole Polytechnique Feminine}{Paris, France}
+      {Software and Data Engineering - AI}{2020 - 2024}
+      
+    \resumeSubheading
+      {Universitat Politecnica de Catalunya}{Barcelona, Spain}
+{Data Science and AI – Python, R, Algorithms}{2022 - 2023}
+
+    \resumeSubheading
+      {
+\textbf{ Advanced program for students preparing top engineering schools (CPGE)}}{Paris, France} 
+      {MPSI - PSI:  advanced Mathematics and Physics}{2017 - 2020}
+
+
+  \resumeSubHeadingListEnd
+
+\end{document}

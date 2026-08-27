@@ -1,2 +1,5 @@
 .DS_Store
 checkout-apllication.txt
+
+# Unused LaTeX template fonts (CV.tex compiles with Computer Modern)
+cv/fonts/
