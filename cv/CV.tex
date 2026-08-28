@@ -169,18 +169,18 @@ Integrated a \textbf{YOLOv4 deep learning model} into a real-time video surveill
 \section{Projects}
   \resumeSubHeadingListStart
 
-   \resumeItem{Polymarket Pricer}{-- Full-stack analytics platform for Polymarket prediction markets}
+   \resumeItem{\href{https://github.com/AntoineROYERB/polymarketpricer}{Polymarket Pricer}}{-- Open-source (MIT) full-stack platform ranking Polymarket wallets by measured predictive skill}
     \vspace{-6pt}
     \resumeItemListStart
         \resumeItem{}
-            {Designed and orchestrated 13 ETL pipelines (12 data + 1 orchestration) validating and ingesting 50,000+ markets across 8 categories, with a 10s refresh interval for real-time alerts}
+            {Designed and orchestrated 13 \textbf{Mage} ETL pipelines validating and ingesting 210,000+ markets across 8 categories, with a 10s refresh interval for real-time alerts}
         \resumeItem{}
-            {Built a \textbf{FastAPI} backend exposing 29 endpoints (including real-time WebSocket feeds) with rate limiting (60 req/min), backed by a \textbf{PostgreSQL} database of 22 tables and 21 ORM models managed through 22 Alembic migrations}
+            {Built a \textbf{FastAPI} backend exposing 28 REST endpoints plus a real-time WebSocket alert feed, with rate limiting (60 req/min), backed by a \textbf{PostgreSQL} database of 21 tables and 21 ORM models managed through 21 Alembic migrations}
         \resumeItem{}
-            {Ensured reliability with 235+ unit and API tests, and containerized the full stack (PostgreSQL, Mage, FastAPI, Next.js) into 4 Docker services}
+            {Ensured reliability with 309 Python tests (unit, API, integration) and 19 front-end tests gated in \textbf{GitHub Actions} CI, and containerized the full stack (PostgreSQL, Mage, FastAPI, Next.js) into 4 Docker services}
     \resumeItemListEnd
   
-    \resumeSubItem{Dofus.js}{-- Turn-based online game with real-time multiplayer: WebSocket infrastructure in Go, isometric React front end, full stack containerized with Docker
+    \resumeSubItem{\href{https://github.com/AntoineROYERB/dofus.js}{Dofus.js}}{-- Turn-based online game with real-time multiplayer: WebSocket infrastructure in Go, isometric React front end, full stack containerized with Docker
 }
 
   \resumeSubHeadingListEnd
