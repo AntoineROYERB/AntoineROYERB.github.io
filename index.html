@@ -150,17 +150,23 @@
               </div>
             </a>
 
-            <a href="https://github.com/AntoineROYERB/dofus.js" target="_blank" rel="noreferrer noopener" class="project-card">
+            <div class="project-card project-card--featured">
               <div class="project-card-header">
                 <h3 class="project-name">dofus.js</h3>
-                <span class="project-lang tag">Go / TypeScript</span>
+                <span class="project-lang tag">Go / TypeScript / WebSocket</span>
               </div>
-              <p class="project-desc" data-i18n="proj1.desc">A turn-based online game with WebSocket real-time multiplayer, built with Go and React. Features a modular backend and isometric frontend.</p>
+              <p class="project-desc" data-i18n="proj1.desc">A playable turn-based tactical combat game in the browser, built as a study of Dofus's combat system. A Go server owns every rule — movement, line of sight, spell areas of effect — and broadcasts an authoritative snapshot over WebSocket; a React client renders a hand-built isometric board on top and never decides anything on its own. Ships with a computer opponent, resume tokens for reconnection, and a two-tap control scheme for touch screens. Try it live, or spin it up yourself with a single docker compose up.</p>
+              <ul class="project-metrics">
+                <li><strong>94</strong><span data-i18n="proj1.m1">tests, race-clean</span></li>
+                <li><strong>95%</strong><span data-i18n="proj1.m2">game-engine coverage</span></li>
+                <li><strong>9</strong><span data-i18n="proj1.m3">CI checks per push</span></li>
+              </ul>
               <div class="project-stats">
-                <span>★ 7</span>
-                <span data-i18n="proj1.status">In progress</span>
+                <span>★ 8</span>
+                <a href="https://dofusjs.onrender.com" target="_blank" rel="noreferrer noopener" class="project-link project-link--play" data-i18n="proj1.play">▶ Play it live</a>
+                <a href="https://github.com/AntoineROYERB/dofus.js" target="_blank" rel="noreferrer noopener" class="project-link" data-i18n="proj1.code">Code ↗</a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
@@ -318,8 +324,12 @@
         "proj0.m3": "REST endpoints",
         "proj0.m4": "tests",
         "proj0.status": "Open source · MIT",
-        "proj1.desc": "A turn-based online game with WebSocket real-time multiplayer, built with Go and React. Features a modular backend and isometric frontend.",
-        "proj1.status": "In progress",
+        "proj1.desc": "A playable turn-based tactical combat game in the browser, built as a study of Dofus's combat system. A Go server owns every rule — movement, line of sight, spell areas of effect — and broadcasts an authoritative snapshot over WebSocket; a React client renders a hand-built isometric board on top and never decides anything on its own. Ships with a computer opponent, resume tokens for reconnection, and a two-tap control scheme for touch screens. Try it live, or spin it up yourself with a single docker compose up.",
+        "proj1.m1": "tests, race-clean",
+        "proj1.m2": "game-engine coverage",
+        "proj1.m3": "CI checks per push",
+        "proj1.play": "▶ Play it live",
+        "proj1.code": "Code ↗",
         "education.title": "Education",
         "edu1.school": "Ecole Polytechnique Féminine",
         "edu1.degree": "Software & Data Engineering — AI",
@@ -382,8 +392,12 @@
         "proj0.m3": "endpoints REST",
         "proj0.m4": "tests",
         "proj0.status": "Open source · MIT",
-        "proj1.desc": "Jeu en ligne tour par tour avec multijoueur temps réel via WebSocket, construit avec Go et React. Backend modulaire et frontend isométrique.",
-        "proj1.status": "En cours",
+        "proj1.desc": "Un jeu de combat tactique tour par tour jouable dans le navigateur, conçu comme une étude du système de combat de Dofus. Un serveur Go arbitre chaque règle — déplacement, ligne de vue, zones d'effet des sorts — et diffuse un instantané faisant autorité via WebSocket ; un client React dessine par-dessus un plateau isométrique fait main, sans jamais décider de rien lui-même. Livré avec un adversaire IA, des jetons de reprise pour la reconnexion, et un contrôle à deux appuis pensé pour le tactile. Jouable en ligne, ou à lancer soi-même avec un seul docker compose up.",
+        "proj1.m1": "tests, sans race condition",
+        "proj1.m2": "couverture du moteur de jeu",
+        "proj1.m3": "checks CI par push",
+        "proj1.play": "▶ Jouer en ligne",
+        "proj1.code": "Code ↗",
         "education.title": "Formation",
         "edu1.school": "Ecole Polytechnique Féminine",
         "edu1.degree": "Software & Data Engineering — IA",
